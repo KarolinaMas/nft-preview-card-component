@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d192c;
+  height: 100vh;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #15263f;
+  padding: 1.5rem;
+  max-width: 350px;
+  border-radius: 15px;
+  font-family: "Outfit", sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 231px;
+}
+
+.card__title {
+  margin-bottom: 1rem;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.card__text {
+  font-size: 1.125rem;
+  line-height: 145%;
+  font-weight: 300;
+  color: #8bacd9;
+}
+
+.card__info {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #2e405a;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__value {
+  color: #00fff8;
+  font-weight: 600;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.card__value-img {
+  height: 18px;
+}
+
+.card__time {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card__time-text {
+  font-weight: 300;
+  color: #8bacd9;
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__author-text {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card__author-text--thin {
+  color: #8bacd9;
+  font-weight: 300;
+}
+
