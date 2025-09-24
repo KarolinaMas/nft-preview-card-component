@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+img {
+  display: block;
+}
+
 body {
   background-color: #0d192c;
   height: 100vh;
@@ -32,11 +36,48 @@ body {
   gap: 1.5rem;
 }
 
+.card__img {
+  position: relative;
+  max-height: 302px;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* background color */
+
+.card__img::before {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: #00fff8;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+/* icon */
+
+.card__img::after {
+  content: url(../images/eye-icon.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
 .card__body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 231px;
 }
 
 .card__title {
@@ -44,6 +85,7 @@ body {
   font-size: 1.375rem;
   font-weight: 600;
   line-height: 125%;
+  transition: color 0.3s ease-in;
 }
 
 .card__description {
@@ -98,10 +140,21 @@ body {
   font-weight: 300;
 }
 
-/* MEDIA QUERIES */
+.card__author-text--thick {
+  transition: color 0.3s ease-in;
+}
 
-@media (min-width: 600px) {
-  .card__body {
-    max-width: 100%;
-  }
+/* HOVER EFFECTS */
+
+.card__img:hover::before {
+  opacity: 0.5;
+}
+
+.card__img:hover::after {
+  opacity: 1;
+}
+
+.card__img:hover ~ .card__body .card__title,
+.card__img:hover ~ .card__body .card__author-text--thick {
+  color: #00fff8;
 }
